@@ -12,6 +12,7 @@ resource "azurerm_virtual_network" "example" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "eb19f165-9c21-4a7a-96e5-5bb557a38228"
+    nikhil               = "owneremail.address.test.com"
   }
 }
 
@@ -41,6 +42,7 @@ resource "azurerm_network_interface" "ni_linux" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "2647f099-dff8-4514-8cef-96159380c02a"
+    nikhil               = "owneremail.address.test.com"
   }
 }
 
@@ -63,6 +65,7 @@ resource "azurerm_network_interface" "ni_win" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "2b5dbf28-04fb-4151-a637-a731bbe7ed1d"
+    nikhil               = "owneremail.address.test.com"
   }
 }
 
@@ -103,6 +106,7 @@ resource azurerm_network_security_group "bad_sg" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "1a591ba4-d969-4572-9704-87b5c55c0ba3"
+    nikhil               = "owneremail.address.test.com"
   }
 }
 
@@ -119,6 +123,7 @@ resource azurerm_network_watcher "network_watcher" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "3da368fc-723f-43d2-8e82-08dcc91e5094"
+    nikhil               = "owneremail.address.test.com"
   }
 }
 
@@ -131,5 +136,9 @@ resource azurerm_network_watcher_flow_log "flow_log" {
   retention_policy {
     enabled = false
     days    = 10
+  }
+  tags = {
+    nikhil    = "owneremail.address.test.com"
+    yor_trace = "e07f855d-5547-4fbc-b567-2e04f9af1db0"
   }
 }
